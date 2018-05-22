@@ -1,0 +1,59 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Library</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Sunflower:300" rel="stylesheet">
+    <script src="main.js" async></script>
+</head>
+
+<body>
+    <header id='header'>
+        <p id='myLibraryTitle'>My Library</p>
+
+        <div id='newBookForm' class='newBookForm'>
+
+            <div id='titleContainer'>
+                <input type='text' id='title' placeholder="Title" required>
+            </div>
+
+            <div id='authorContainer'>
+                <input type='text' id='author' placeholder="Author" required>
+            </div>
+
+            <div id='pagesContainer'>
+                <input type='number' id='pages' placeholder="pages" min=0 max=5000 required>
+            </div>
+
+            <div id='readContainer'>
+                <label for='read'>Read?</label>
+                <input type='checkbox' id='read'>
+            </div>
+
+            <button id='save' onClick='addBookToLibrary()'><i class="far fa-save"></i></button>
+
+
+        </div>
+        <div id="buttonHideShow">
+            <button id="show-hide" onclick='showForm()' class='hidden'>Add a Book</button>
+        </div>
+
+    </header>
+    <div class='center'>
+        <div id='column-names'>
+            <p>Title</p>
+            <p>Author</p>
+            <p>Pages</p>
+        </div>
+    </div>
+    <div id="listOfBooks"></div>
+
+
+</body>
+
+</html>
